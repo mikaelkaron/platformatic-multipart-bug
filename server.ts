@@ -22,6 +22,9 @@ const routes: FastifyPluginAsyncJsonSchemaToTs<{}> = async (fastify) => {
         description: 'Write file'
       } as const,
       handler: async (request) => {
+        const r = await fetch('https://www.idg.se')
+        console.log(r.ok)
+
         const data = await request.file()
         if (!data) {
           throw new Error('No file')
