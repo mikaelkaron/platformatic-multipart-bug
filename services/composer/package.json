@@ -1,0 +1,28 @@
+{
+  "name": "composer",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "platformatic start",
+    "test": "borp",
+    "clean": "rm -fr ./dist",
+    "build": "platformatic compile",
+    "lint": "biome lint .",
+    "format": "biome format . --write",
+    "check": "biome check . --write"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "borp": "^0.20.0",
+    "fastify": "^5.0.0",
+    "shared": "*",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@platformatic/composer": "^2.75.0",
+    "fastify-tsconfig": "^3.0.0"
+  },
+  "engines": {
+    "node": "^22.14.0 || ^20.6.0"
+  }
+}

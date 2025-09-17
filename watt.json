@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.platformatic.dev/@platformatic/runtime/2.75.0.json",
+  "watch": true,
+  "autoload": {
+    "path": "services",
+    "exclude": [
+      "shared"
+    ]
+  },
+  "logger": {
+    "level": "{PLT_SERVER_LOGGER_LEVEL}"
+  },
+  "server": {
+    "port": "{PORT}",
+    "hostname": "{PLT_SERVER_HOSTNAME}"
+  },
+  "metrics": {
+    "port": 9090,
+    "hostname": "{PLT_SERVER_HOSTNAME}"
+  },
+  "managementApi": "{PLT_MANAGEMENT_API}",
+  "entrypoint": "composer"
+}

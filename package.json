@@ -1,0 +1,31 @@
+{
+  "name": "test",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wattpm dev",
+    "build": "wattpm build",
+    "start": "wattpm start",
+    "test": "borp",
+    "clean": "npm run clean --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "format": "npm run format --workspaces --if-present",
+    "check": "npm run check --workspaces --if-present"
+  },
+  "devDependencies": {
+    "borp": "^0.20.0",
+    "fastify": "^5.0.0",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@platformatic/runtime": "^2.75.0",
+    "platformatic": "^2.75.0",
+    "wattpm": "^2.75.0"
+  },
+  "engines": {
+    "node": "^18.8.0 || >=20.6.0"
+  },
+  "workspaces": [
+    "services/*"
+  ]
+}

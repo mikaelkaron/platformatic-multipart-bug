@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.platformatic.dev/@platformatic/service/2.75.0.json",
+  "service": {
+    "openapi": true
+  },
+  "plugins": {
+    "paths": [
+      {
+        "path": "./routes/file.ts",
+        "encapsulate": true,
+        "options": {
+          "prefix": "/files"
+        }
+      }
+    ],
+    "typescript": {
+      "enabled": "{PLT_TYPESCRIPT}",
+      "flags": ["--build"]
+    }
+  }
+}
