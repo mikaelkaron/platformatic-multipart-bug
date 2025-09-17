@@ -12,6 +12,11 @@ npm run start --workspace file
 curl -v -F filename=@README.md http://127.0.0.1:8081/files/test
 ```
 
+```bash
+npm run start
+curl -v -X POST http://127.0.0.1:8081/api/v1/file/files/test
+```
+
 broken:
 
 ```bash

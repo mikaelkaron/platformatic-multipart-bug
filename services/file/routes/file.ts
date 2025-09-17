@@ -24,12 +24,16 @@ const routes: FastifyPluginAsyncJsonSchemaToTs<{}> = async (fastify) => {
         const r = await fetch('https://www.idg.se')
         console.log(r.ok)
 
-        const data = await request.file()
-        if (!data) {
-          throw new Error('No file')
+        if (request.isMultipart()) {
+          const data = await request.file()
+          if (!data) {
+            throw new Error('No file')
+          }
+
+          return data.file
         }
 
-        return data.file
+        return request.body
       }
     })
 }
