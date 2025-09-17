@@ -12,5 +12,11 @@
     ],
     "refreshTimeout": 1000
   },
+  "plugins": {
+    "paths": [{
+      "path": "./plugins",
+      "encapsulate": false
+    }]
+  },
   "watch": true
 }
